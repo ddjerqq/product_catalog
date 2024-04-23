@@ -6,6 +6,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{97EF1CAC-2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain.csproj", "{6E7AA744-ED58-42D4-8946-3E52604DEA30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Application\Application.csproj", "{7E34B8BF-FD72-4551-8614-C2B7096DD288}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6E7AA744-ED58-42D4-8946-3E52604DEA30} = {7D3E5AF2-6784-4074-A932-DDB57887327B}
+		{7E34B8BF-FD72-4551-8614-C2B7096DD288} = {7D3E5AF2-6784-4074-A932-DDB57887327B}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6E7AA744-ED58-42D4-8946-3E52604DEA30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6E7AA744-ED58-42D4-8946-3E52604DEA30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E7AA744-ED58-42D4-8946-3E52604DEA30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E7AA744-ED58-42D4-8946-3E52604DEA30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E34B8BF-FD72-4551-8614-C2B7096DD288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E34B8BF-FD72-4551-8614-C2B7096DD288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E34B8BF-FD72-4551-8614-C2B7096DD288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E34B8BF-FD72-4551-8614-C2B7096DD288}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
