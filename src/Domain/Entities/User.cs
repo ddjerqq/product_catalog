@@ -13,5 +13,9 @@ public class User
 
     public string Username { get; set; } = default!;
 
+    public decimal Wallet { get; set; }
+
+    public decimal Bank { get; set; }
+
     public ICollection<Item> Items { get; set; } = [];
 }
