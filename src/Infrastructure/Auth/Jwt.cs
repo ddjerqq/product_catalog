@@ -31,11 +31,9 @@ public static class Jwt
         {
             var rsa = RSA.Create();
 
-            var publicKey = Environment.GetEnvironmentVariable("Jwt:PublicKey")!;
-            rsa.ImportRSAPublicKey(Convert.FromBase64String(publicKey), out _);
-
-            var privateKey = Environment.GetEnvironmentVariable("Jwt:PrivateKey")!;
-            rsa.ImportRSAPrivateKey(Convert.FromBase64String(privateKey), out _);
+            var keyFile = Environment.GetEnvironmentVariable("JWT__KEY_PATH")!;
+            var keyBytes = File.ReadAllBytes(keyFile);
+            rsa.ImportRSAPrivateKey(keyBytes, out _);
 
             return new RsaSecurityKey(rsa);
         }
@@ -50,10 +48,10 @@ public static class Jwt
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidAlgorithms = [SecurityAlgorithms.HmacSha256],
+        ValidAlgorithms = [SecurityAlgorithms.RsaSha256],
     };
 
-    private static readonly SigningCredentials SigningCredentials = new(Key, SecurityAlgorithms.Sha256);
+    private static readonly SigningCredentials SigningCredentials = new(Key, SecurityAlgorithms.RsaSha256);
 
     public static string GenerateToken(IEnumerable<Claim> claims, TimeSpan expiration, IDateTimeProvider dateTimeProvider)
     {
