@@ -1,6 +1,6 @@
 ﻿using Application.Common.Abstractions;
 
-namespace Application.Services;
+namespace Infrastructure.Services;
 
 public class UtcDateTimeProvider : IDateTimeProvider
 {
